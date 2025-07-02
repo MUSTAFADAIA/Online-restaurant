@@ -1,0 +1,84 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/css.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><i class="fas fa-utensils"></i>food</a>
+      <div id="menu-bar" class="fas fa-bars"></div>
+      <nav class="navbar">
+        <a href="./index.html">home</a>
+        <a href="#speciality">speciality</a>
+        <a href="#popular">popular</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+        <a href="login.html" class="logout-link">Logout</a>
+        <a href="cart.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+      </nav>
+    </header>
+
+    <h1>Your Cart</h1>
+
+    <div class="cart-container" id="cart"></div>
+
+    <div class="payment-options">
+      <label>Payment Method:</label>
+      <div class="payment-methods">
+        <input type="radio" name="payment" id="cash" value="cash" checked />
+        <label for="cash">Cash on Delivery</label><br />
+        <input type="radio" name="payment" id="card" value="card" />
+        <label for="card">Pay by Card</label>
+      </div>
+
+      <div class="card-form" id="card-form" style="display: none">
+        <input type="text" placeholder="Cardholder Name" id="card-name" />
+        <input
+          type="text"
+          placeholder="Card Number"
+          maxlength="16"
+          id="card-number"
+        />
+        <input type="text" placeholder="Expiry Date (MM/YY)" id="card-expiry" />
+        <input type="text" placeholder="CVV" maxlength="4" id="card-cvv" />
+      </div>
+    </div>
+
+    <button class="checkout-btn" onclick="submitOrder()">
+      Proceed to Checkout
+    </button>
+
+    <div id="success-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title">✅ Order Confirmed!</h2>
+        <p id="modal-message">Your order will be processed soon.</p>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="share">
+        <a href="" class="btn">facebook</a>
+        <a href="" class="btn">twitter</a>
+        <a href="" class="btn">instagram</a>
+        <a href="" class="btn">pinterest</a>
+        <a href="" class="btn">linkedin</a>
+      </div>
+      <h1 class="credit"></h1>
+    </section>
+
+    <script src="./javaesecript.js"></script>
+  </body>
+</html>
